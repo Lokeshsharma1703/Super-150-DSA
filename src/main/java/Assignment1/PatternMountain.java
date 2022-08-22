@@ -1,28 +1,27 @@
 package Assignment1;
 import java.util.Scanner;
-public class PatternMountain {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-		int row = 1;
-		int digits = 1;
-		int space = 2*(n-1);
-		while(row<=n) {
-			int i=1;
-			while(i<=row) {
-				System.out.print(i++ +" ");
+
+public class PatternMountain
+{
+	public static void main(String[] args)
+	{
+		Scanner scanner = new Scanner(System.in);
+		int rows = scanner.nextInt();
+		for (int i = 1; i <= rows; i++)
+		{
+			for (int j = 1; j <= i; j++)
+			{
+				System.out.print(j);
 			}
-			int j=1;
-			while(j<space) {
-				System.out.print("  ");
-				j++;
+
+			for (int j= i*2 ; j < rows*2; j++)
+			{
+				System.out.print(" ");
 			}
-			while(i>1) {
-				System.out.print(--i +" ");
+			for (int l = i; l >= 1; l--)
+			{
+				System.out.print(l);
 			}
-			row++;
-			space-=2;
-			digits++;
 			System.out.println();
 		}
 	}
