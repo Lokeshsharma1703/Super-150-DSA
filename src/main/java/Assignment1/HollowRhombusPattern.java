@@ -12,10 +12,10 @@
 //        Sample Input
 //        5
 //        Sample Output
-//        *****
-//        *   *
-//        *   *
-//        *   *
+//            *****
+//           *   *
+//          *   *
+//         *   *
 //        *****
 //        Explanation
 //        For any input N. First line contains 4 space and then 5 {*} and then the second line contains according to the output format.
@@ -24,8 +24,10 @@ package Assignment1;
 
 import java.util.Scanner;
 
-public class HollowRhombusPattern {
-    public static void main(String[] args) {
+public class HollowRhombusPattern
+{
+    public static void main(String[] args)
+    {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int row = 1;
