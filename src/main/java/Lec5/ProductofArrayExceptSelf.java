@@ -19,11 +19,6 @@ public class ProductofArrayExceptSelf {
         for(int i=nums.length-2;i>=0;i--){
             rightmax[i] = rightmax[i+1] * nums[i+1];
         }
-        int sum = 0;
-        for(int i=0;i<leftmax.length;i++){
-            sum+=Math.min(leftmax[i],rightmax[i])-nums[i];
-        }
-
         for(int i=0;i<leftmax.length;i++){
             leftmax[i] = leftmax[i]*rightmax[i];
         }
