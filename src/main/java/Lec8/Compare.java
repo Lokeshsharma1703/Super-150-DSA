@@ -28,6 +28,7 @@ public class Compare {
                 System.out.println(-1);
             else
                 System.out.println(0);
+//        System.out.println(isCompare(s1,s2));
     }
 //    private static int isCompare(String s1, String s2){
 //        int j=0;
@@ -40,5 +41,6 @@ public class Compare {
 //            i++;
 //            j++;
 //        }
+//        return s1.length()-s2.length();
 //    }
 }
