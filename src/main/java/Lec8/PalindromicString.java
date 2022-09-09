@@ -1,5 +1,6 @@
 package Lec8;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class PalindromicString {
