@@ -1,8 +1,11 @@
 package Lec12;
 
+import java.util.Scanner;
+
 public class Recursion_coinToss {
     public static void main(String[] args) {
-        int n = 3;
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
         coinToss(n, "HT","");
     }
     private static void coinToss(int n, String s, String res){

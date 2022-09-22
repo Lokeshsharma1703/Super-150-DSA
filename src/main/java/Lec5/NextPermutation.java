@@ -2,7 +2,7 @@ package Lec5;
 
 public class NextPermutation {
     public static void main(String[] args) {
-        int[] arr = {1,2,3};
+        int[] arr = {3,2,1};
         nextPermutation(arr);
         for(int i:arr){
             System.out.print(i+" ");
