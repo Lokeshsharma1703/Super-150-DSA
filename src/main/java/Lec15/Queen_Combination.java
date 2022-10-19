@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 public class Queen_Combination {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+        int n = 4;
         boolean[] board = new boolean[n];
         int tq = 2;
         Printanswer(board, tq, 0, "", 0);
@@ -19,7 +18,8 @@ public class Queen_Combination {
         for(int i=index;i<board.length;i++){
             if(board[i]==false){
                 board[i] = true;
-                Printanswer(board, tq, qpsf+1, res+"b"+i+"q"+qpsf, i+1);
+//                Printanswer(board, tq, qpsf+1, res+"b"+i+"q"+qpsf, i+1);
+                Printanswer(board, tq, qpsf+1, res+(i+1), i+1);
                 board[i] = false; //undo step / backtrack step
             }
         }
