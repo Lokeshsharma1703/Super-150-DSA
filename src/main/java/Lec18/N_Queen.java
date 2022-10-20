@@ -6,7 +6,6 @@ public class N_Queen {
     public static void main(String[] args) {
         int n = 4;
         boolean[][] board = new boolean[n][n];
-        List<List<String>> res = new ArrayList<>();
         queenProblem(board, n, 0);
     }
     private static void queenProblem(boolean[][] board, int tq, int row){
