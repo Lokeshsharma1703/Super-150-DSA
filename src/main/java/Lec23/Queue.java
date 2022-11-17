@@ -1,9 +1,9 @@
 package Lec23;
 
 public class Queue {
-    private int[] arr;
-    private int front = 0;
-    private int size = 0;
+    protected int[] arr;
+    protected int front = 0;
+    protected int size = 0;
 
     public Queue(){
         arr = new int[5];
@@ -44,7 +44,7 @@ public class Queue {
     }
 
     public void display(){
-        for (int i = 0; i <= size; i++) {
+        for (int i = 0; i < size; i++) {
             System.out.print(arr[(front+i)%arr.length]+" ");
         }
         System.out.println();

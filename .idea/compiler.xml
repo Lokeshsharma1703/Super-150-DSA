@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Super-150-DSA" target="18" />
+      <module name="Super-150-DSA" target="16" />
     </bytecodeTargetLevel>
   </component>
 </project>
