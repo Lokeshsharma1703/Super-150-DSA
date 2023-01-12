@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Subsets {
     public static void main(String[] args) {
-        int[] nums = {1,2,2};
+        int[] nums = {1,2,3};
         List<List<Integer>> res = new ArrayList<>();
         List<Integer> temp = new ArrayList<>();
         Arrays.sort(nums);

@@ -1,6 +1,5 @@
 package Lec28;
 
-import Lec5.GasStation;
 
 public class LinkedList {
     private class Node{
@@ -147,5 +146,9 @@ public class LinkedList {
             temp = temp.next;
         }
         System.out.println("null");
+    }
+
+    public void createCycle() throws Exception{
+        tail.next = getNode(2);
     }
 }

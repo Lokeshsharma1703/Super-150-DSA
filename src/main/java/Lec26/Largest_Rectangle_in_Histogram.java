@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class Largest_Rectangle_in_Histogram {
     public static void main(String[] args) {
-        int[] heights = {2,1,5,6,2,3};
+        int[] heights = {1,5,4,3};
         System.out.println(largestRectangleArea(heights));
     }
     private static int largestRectangleArea(int[] heights) {
