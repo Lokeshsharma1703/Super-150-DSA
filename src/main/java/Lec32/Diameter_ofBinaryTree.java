@@ -1,8 +1,5 @@
 package Lec32;
 
-import Lec30.Binary_Tree;
-import javafx.scene.control.DialogPane;
-
 public class Diameter_ofBinaryTree {
     private class TreeNode {
         int val;
