@@ -50,14 +50,16 @@ public class Graph {
         }
     }
 
-    public boolean hasPath(int src, int des, HashSet<Integer> visited){
+    public boolean hasPath(int src, int des, HashSet<Integer> visited, String path){
         if(src==des){
+            path += des;
+            System.out.println(path);
             return true;
         }
         visited.add(src);
         for(int neighbour : map.get(src).keySet()){
             if(!visited.contains(neighbour)) {
-                boolean res = hasPath(neighbour, des, visited);
+                boolean res = hasPath(neighbour, des, visited, path + src+" -> ");
                 if (res) {
                     return res;
                 }
@@ -65,5 +67,115 @@ public class Graph {
         }
         visited.remove(src);
         return false;
+    }
+
+    public boolean bfs(int src, int des){
+        HashSet<Integer> visited = new HashSet<>();
+        Queue<Integer> q = new LinkedList<>();
+        q.offer(src);
+        while (!q.isEmpty()){
+            int remove = q.poll();
+
+            if(visited.contains(remove)){
+                continue;
+            }
+
+            visited.add(remove);
+
+            if(remove == des){
+                return true;
+            }
+
+            for(int neighbours : map.get(remove).keySet()){
+                if(!visited.contains(neighbours)){
+                    q.add(neighbours);
+                }
+            }
+        }
+
+        return false;
+    }
+
+    public boolean dfs(int src, int des){
+        HashSet<Integer> visited = new HashSet<>();
+        Stack<Integer> st = new Stack<>();
+        st.push(src);
+        while (!st.isEmpty()){
+            int remove = st.pop();
+
+            if(visited.contains(remove)){
+                continue;
+            }
+
+            visited.add(remove);
+
+            if(remove == des){
+                return true;
+            }
+
+            for(int neighbours : map.get(remove).keySet()){
+                if(!visited.contains(neighbours)){
+                    st.push(neighbours);
+                }
+            }
+        }
+
+        return false;
+    }
+
+    public void bft(){
+        HashSet<Integer> visited = new HashSet<>();
+        Queue<Integer> q = new LinkedList<>();
+        for(int src : map.keySet()) {
+            if(visited.contains(src)){
+                continue;
+            }
+            q.offer(src);
+            while (!q.isEmpty()) {
+                int remove = q.poll();
+
+                if (visited.contains(remove)) {
+                    continue;
+                }
+
+                visited.add(remove);
+
+                System.out.print(remove + " ");
+
+                for (int neighbours : map.get(remove).keySet()) {
+                    if (!visited.contains(neighbours)) {
+                        q.add(neighbours);
+                    }
+                }
+            }
+        }
+    }
+
+    public void dft(){
+        HashSet<Integer> visited = new HashSet<>();
+        Stack<Integer> st = new Stack<>();
+        for(int src : map.keySet()) {
+            if(visited.contains(src)){
+                continue;
+            }
+            st.push(src);
+            while (!st.isEmpty()) {
+                int remove = st.pop();
+
+                if (visited.contains(remove)) {
+                    continue;
+                }
+
+                visited.add(remove);
+
+                System.out.print(remove+" ");
+
+                for (int neighbours : map.get(remove).keySet()) {
+                    if (!visited.contains(neighbours)) {
+                        st.push(neighbours);
+                    }
+                }
+            }
+        }
     }
 }

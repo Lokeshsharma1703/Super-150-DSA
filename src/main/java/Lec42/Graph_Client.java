@@ -13,6 +13,11 @@ public class Graph_Client {
         graph.addEdge(5,6,4);
         graph.addEdge(7,5,3);
 //        graph.display();
-        System.out.println(graph.hasPath(1, 6, new HashSet<Integer>()));
+//        System.out.println(graph.hasPath(1, 6, new HashSet<Integer>(), ""));
+//        System.out.println(graph.bfs(1, 6));
+//        System.out.println(graph.dfs(1, 6));
+        graph.bft();
+        System.out.println();
+        graph.dft();
     }
 }
