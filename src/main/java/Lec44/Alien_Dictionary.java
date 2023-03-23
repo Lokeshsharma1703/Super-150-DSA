@@ -24,7 +24,7 @@ public class Alien_Dictionary {
         for (int i = 0; i < N-1; i++) {
             String s1 = dict[i];
             String s2 = dict[i+1];
-            if(s1.contains(s2) && s1.length()>s2.length()){
+            if(s1.startsWith(s2) && s1.length()>s2.length()){
                 return "";
             }
 
