@@ -1,5 +1,7 @@
 package Lec44;
 
+import Lec46.Minimize_Malware_Spread;
+
 import java.util.*;
 
 public class DSU {
@@ -56,6 +58,10 @@ public class DSU {
         }
     }
 
+    public int size(int v){
+        Node nn = map.get(v);
+        return find(nn).rank;
+    }
 
 
 }
