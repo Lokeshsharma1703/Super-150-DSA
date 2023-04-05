@@ -69,7 +69,7 @@ public class Dijkstra_Algorithm {
     }
 
     public static void main(String[] args) {
-        Dijkstra_Algorithm graph = new Dijkstra_Algorithm(7);
+        Dijkstra_Algorithm graph = new Dijkstra_Algorithm(9);
         graph.addEdge(1,4,6);
         graph.addEdge(1,2,10);
         graph.addEdge(2,3,7);
